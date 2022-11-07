@@ -12,8 +12,8 @@
     GET api/feed (page)
     GET api/user/feed (page)
     GET api/user/{id}/feed (page)
-    
-    GET api/user 
+
+    GET api/user
     GET api/user/{id}
 
     POST api/feed (type=text/photo, body, photo)
@@ -24,4 +24,14 @@
     GET api/search (txt)
 
 - Criar o projeto
+
 - Instalar as bibliotecas
+    JWT
+    Image Intervention
+    
+- Controllers
+    AuthController
+    UserController
+    FeedController
+    PostController
+    SearchController
