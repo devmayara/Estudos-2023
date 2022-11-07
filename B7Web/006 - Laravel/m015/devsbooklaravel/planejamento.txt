@@ -28,10 +28,13 @@
 - Instalar as bibliotecas
     JWT
     Image Intervention
-    
+
 - Controllers
     AuthController
     UserController
     FeedController
     PostController
     SearchController
+
+- Token
+    eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3VzZXIiLCJpYXQiOjE2Njc4NTIwOTIsIm5iZiI6MTY2Nzg1MjA5MiwianRpIjoiZ3o5TkVxQldIOXlQcTd1NCIsInN1YiI6IjMiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.ghu27Kf5ARLz2eAubogBrLqcBvZBM6T7LGGstumscQo

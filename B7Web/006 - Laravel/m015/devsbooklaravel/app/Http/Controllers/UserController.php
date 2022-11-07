@@ -15,3 +15,9 @@ class UserController extends Controller
         $this->loggedUser = auth()->user();
     }
 }
+
+// $array = ['error'=>''];
+
+
+
+// return $array;

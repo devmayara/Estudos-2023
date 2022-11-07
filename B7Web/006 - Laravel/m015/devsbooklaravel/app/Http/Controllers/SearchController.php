@@ -15,3 +15,9 @@ class SearchController extends Controller
         $this->loggedUser = auth()->user();
     }
 }
+
+// $array = ['error'=>''];
+
+
+
+// return $array;
