@@ -10,14 +10,12 @@ class AdminController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth', [
-            'except' => [
-                'login',
-                'loginAction',
-                'register',
-                'registerAction',
-            ]
-        ]);
+        $this->middleware('auth', ['except' =>[
+            'login',
+            'loginAction',
+            'register',
+            'registerAction',
+        ]]);
     }
 
     public function index()
@@ -39,7 +37,7 @@ class AdminController extends Controller
             return redirect('/admin');
         } else {
             $request->session()->flash('error', 'E-mail ou senha não conferem!');
-            return to_route('admin.login');
+            return redirect('/admin/login');
         }
     }
 
@@ -52,12 +50,12 @@ class AdminController extends Controller
 
     public function registerAction(Request $request)
     {
-        $creds = $request->only('email', 'password');
+        $creds = $request->only(['email', 'password']);
 
         $hasEmail = User::where('email', $creds['email'])->count();
         if($hasEmail === 0) {
             $newUser = new User();
-            $newUser->emal = $creds['email'];
+            $newUser->email = $creds['email'];
             $newUser->password = password_hash($creds['password'], PASSWORD_DEFAULT);
             $newUser->save();
 
@@ -67,5 +65,11 @@ class AdminController extends Controller
             $request->session()->flash("error", "E-mail já cadastrado!");
             return redirect('/admin/register');
         }
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect('/admin');
     }
 }

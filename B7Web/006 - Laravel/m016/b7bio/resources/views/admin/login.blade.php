@@ -8,12 +8,12 @@
     <title>B7Bio | Login</title>
 </head>
 <body class="text-center">
-    @if (session()->has('error'))
+    @if ($error)
         <div class="error">
-            {{ session()->get('error') }}
+            {{ $error }}
         </div>
     @endif
-    <form class="form-signin" method="POST" action="">
+    <form class="form-signin" method="POST">
         @csrf
         <h1 class="h3 mb-3 font-weight-normal">Faça Login</h1>
         <div class="form-group">
@@ -27,7 +27,7 @@
                 <input type="checkbox" value="remember-me"> Lembrar de mim
             </label>
         </div>
-        <input class="btn btn-primary mb-4" type="button" value="Entrar">
+        <input class="btn btn-primary mb-4" type="submit" value="Entrar">
         <br>Ainda não tem cadastro? <a href="{{ url('/admin/register') }}">Cadastre-se</a>
         <p class="mt-5 mb-3 text-muted">copyright &copy; - <?php echo date('Y'); ?></p>
     </form>
