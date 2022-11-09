@@ -18,11 +18,6 @@ class AdminController extends Controller
         ]]);
     }
 
-    public function index()
-    {
-        echo 'admin';
-    }
-
     public function login(Request $request)
     {
         return view('admin.login', [
@@ -71,5 +66,10 @@ class AdminController extends Controller
     {
         Auth::logout();
         return redirect('/admin');
+    }
+
+    public function index()
+    {
+        return view('admin.index');
     }
 }
