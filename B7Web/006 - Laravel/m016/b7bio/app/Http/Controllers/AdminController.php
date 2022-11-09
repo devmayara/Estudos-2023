@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -38,17 +39,33 @@ class AdminController extends Controller
             return redirect('/admin');
         } else {
             $request->session()->flash('error', 'E-mail ou senha não conferem!');
-            return redirect('/admin/login');
+            return to_route('admin.login');
         }
     }
 
-    public function register()
+    public function register(Request $request)
     {
-        echo 'cadastro';
+        return view('admin.register', [
+            'error' => $request->session()->get('error'),
+        ]);
     }
 
-    public function registerAction()
+    public function registerAction(Request $request)
     {
-        echo 'cadastro';
+        $creds = $request->only('email', 'password');
+
+        $hasEmail = User::where('email', $creds['email'])->count();
+        if($hasEmail === 0) {
+            $newUser = new User();
+            $newUser->emal = $creds['email'];
+            $newUser->password = password_hash($creds['password'], PASSWORD_DEFAULT);
+            $newUser->save();
+
+            Auth::login($newUser);
+            return redirect('/admin');
+        } else {
+            $request->session()->flash("error", "E-mail já cadastrado!");
+            return redirect('/admin/register');
+        }
     }
 }

@@ -23,7 +23,8 @@ Route::prefix('/admin')->group(function() {
     Route::post('/login', [AdminController::class, 'loginAction']);
 
     Route::get('/register', [AdminController::class, 'register']);
-    
+    Route::post('/register', [AdminController::class, 'registerAction']);
+
     Route::get('/', [AdminController::class, 'index']);
 });
 
