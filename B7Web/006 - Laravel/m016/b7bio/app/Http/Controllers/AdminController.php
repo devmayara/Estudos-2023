@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
@@ -11,7 +12,9 @@ class AdminController extends Controller
         $this->middleware('auth', [
             'except' => [
                 'login',
+                'loginAction',
                 'register',
+                'registerAction',
             ]
         ]);
     }
@@ -21,12 +24,30 @@ class AdminController extends Controller
         echo 'admin';
     }
 
-    public function login()
+    public function login(Request $request)
     {
-        echo 'login';
+        return view('admin.login', [
+            'error' => $request->session()->get('error')
+        ]);
+    }
+
+    public function loginAction(Request $request)
+    {
+        $creds = $request->only('email', 'password');
+        if(Auth::attempt($creds)) {
+            return redirect('/admin');
+        } else {
+            $request->session()->flash('error', 'E-mail ou senha não conferem!');
+            return redirect('/admin/login');
+        }
     }
 
     public function register()
+    {
+        echo 'cadastro';
+    }
+
+    public function registerAction()
     {
         echo 'cadastro';
     }
