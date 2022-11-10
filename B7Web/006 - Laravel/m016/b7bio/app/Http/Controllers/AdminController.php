@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Page;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -70,6 +71,26 @@ class AdminController extends Controller
 
     public function index()
     {
-        return view('admin.index');
+        $user = Auth::user();
+        $pages = Page::where('id_user', $user->id)->get();
+
+        return view('admin.index', [
+            'pages' => $pages
+        ]);
+    }
+
+    public function pageLinks($slug)
+    {
+        return view('admin.page_links');
+    }
+
+    public function pageDesign()
+    {
+        return view('admin.page_design');
+    }
+
+    public function pageStats()
+    {
+        return view('admin.page_stats');
     }
 }
