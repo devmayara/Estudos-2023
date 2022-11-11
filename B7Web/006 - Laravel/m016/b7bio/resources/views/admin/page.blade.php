@@ -4,18 +4,23 @@
 
 @section('content')
 
-    Página: 123
+    <h2>Página: 123</h2>
 
-    <ul>
-        <li><a href="{{ url('/admin/123/links') }}">Links</a></li>
-        <li><a href="{{ url('/admin/123/design') }}">Aparência</a></li>
-        <li><a href="{{ url('/admin/123/stats') }}">Estatísticas</a></li>
-    </ul>
+    <div class="area">
+        <div class="leftside">
+            <ul class="d-flex">
+                <li @if ($menu=='links') class="active" @endif><a class="list-group-item" href="{{ url('/admin/123/links') }}">Links</a></li>
+                <li @if ($menu=='design') class="active" @endif><a class="list-group-item" href="{{ url('/admin/123/design') }}">Aparência</a></li>
+                <li @if ($menu=='stats') class="active" @endif><a class="list-group-item" href="{{ url('/admin/123/stats') }}">Estatísticas</a></li>
+            </ul>
 
-    @yield('body')
+            @yield('body')
 
-    <div>
-        <iframe src="{{ url('/slug') }}" frameborder="0"></iframe>
+        </div>
+
+        <div class="rightside">
+            <iframe src="{{ url('/slug') }}" frameborder="0"></iframe>
+        </div>
     </div>
 
 @endsection

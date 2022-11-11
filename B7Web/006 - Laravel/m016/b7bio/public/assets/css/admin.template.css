@@ -82,11 +82,6 @@ body {
     box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
   }
 
-  a {
-    color: #000;
-    text-decoration: none;
-  }
-
   /* .navbar .form-control {
     padding: .75rem 1rem;
     border-width: 0;
@@ -103,3 +98,39 @@ body {
     border-color: transparent;
     box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
   } */
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #000;
+    text-decoration: none;
+  }
+
+  li.active {
+    border-bottom: 2px solid #333;
+  }
+
+  iframe {
+    width: 300px;
+    height: 550px;
+    border: 10px solid #333;
+    border-radius: 20px;
+    margin: 20px;
+  }
+
+  .area {
+    display: flex;
+    flex: 1;
+  }
+
+  .leftside {
+    flex: 1;
+    border-right: 1px solid;
+  }
+
+  .rightside {
+    margin: 0 auto;
+  }
+

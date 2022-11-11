@@ -81,16 +81,25 @@ class AdminController extends Controller
 
     public function pageLinks($slug)
     {
-        return view('admin.page_links');
+        $user = Auth::user();
+        $page = Page::where('slug');
+
+        return view('admin.page_links', [
+            'menu' => 'links'
+        ]);
     }
 
     public function pageDesign()
     {
-        return view('admin.page_design');
+        return view('admin.page_design', [
+            'menu' => 'design'
+        ]);
     }
 
     public function pageStats()
     {
-        return view('admin.page_stats');
+        return view('admin.page_stats', [
+            'menu' => 'stats'
+        ]);
     }
 }
