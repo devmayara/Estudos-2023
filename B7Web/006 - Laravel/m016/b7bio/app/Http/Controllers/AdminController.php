@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Link;
 use App\Models\Page;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -82,11 +83,23 @@ class AdminController extends Controller
     public function pageLinks($slug)
     {
         $user = Auth::user();
-        $page = Page::where('slug');
+        $page = Page::where('slug', $slug)
+        ->where('id_user', $user->id)
+        ->first();
 
-        return view('admin.page_links', [
-            'menu' => 'links'
-        ]);
+        if($page) {
+            $links = Link::where('id_page', $page->id)
+            ->orderBy('order', 'ASC')
+            ->get();
+
+            return view('admin.page_links', [
+                'menu' => 'links',
+                'page' => $page,
+                'links' => $links,
+            ]);
+        } else {
+            return redirect('/admin');
+        }
     }
 
     public function pageDesign()

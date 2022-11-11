@@ -134,3 +134,28 @@ body {
     margin: 0 auto;
   }
 
+  #links {
+    padding: 0;
+    list-style: none;
+    margin: 20px;
+  }
+
+  .link--item {
+    display: flex;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+    box-shadow: 0 2px 2px #ccc;
+  }
+  .link--item-order {
+    cursor: move;
+    margin-right: 15px;
+  }
+  .link--item-info {
+    flex: 1;
+  }
+  .link--item-title {
+    font-weight: bold;
+  }
