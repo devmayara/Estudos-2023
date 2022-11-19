@@ -31,9 +31,9 @@
       $( "#sortable" ).sortable();
         onEnd: async (e) => {
             let id = e.item.getAttribute('data-id');
-            let link = `{{url('/admin/linkorder/${id}/${e.newindex}')}}`;
+            let link = `{{url('/admin/linkorder/${id}/${e.newIndex}')}}`;
             await fetch(link);
-            window.location.href = window.location.href;
+            // window.location.href = window.location.href;
         }
     } );
     </script>

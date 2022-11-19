@@ -127,6 +127,7 @@ body {
 
   .leftside {
     flex: 1;
+    padding-right: 10px;
     border-right: 1px solid;
   }
 
