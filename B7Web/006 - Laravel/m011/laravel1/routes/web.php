@@ -15,17 +15,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix('/tarefas')->group(function(){
-    Route::get('/', [TarefasController::class, 'list']); // Listagem de tarefas
+    Route::get('/', [TarefasController::class, 'list'])->name('tarefas.list'); // Listagem de tarefas
 
-    Route::get('add', [TarefasController::class, 'add']); // Tela de adição
+    Route::get('add', [TarefasController::class, 'add'])->name('tarefas.add'); // Tela de adição
     Route::post('add', [TarefasController::class, 'addAction']); // Ação de adição
 
-    Route::get('edit/{id}', [TarefasController::class, 'edit']); // Tela de edição
+    Route::get('edit/{id}', [TarefasController::class, 'edit'])->name('tarefas.edit'); // Tela de edição
     Route::post('edit/{id}', [TarefasController::class, 'editAction']); // Ação de edição
 
-    Route::get('delete/{id}', [TarefasController::class, 'del']); // Ação de deletar
+    Route::get('delete/{id}', [TarefasController::class, 'del'])->name('tarefas.del'); // Ação de deletar
 
-    Route::get('marcar/{id}', [TarefasController::class, 'done']); // Marcar resolvido/nao.
+    Route::get('marcar/{id}', [TarefasController::class, 'done'])->name('tarefas.done'); // Marcar resolvido/nao.
 });
 
 // Route::fallback(function () {
