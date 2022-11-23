@@ -1,5 +1,9 @@
 <?php
 /** @var yii\web\View $this */
 ?>
+<h1>hello/say-something</h1>
 
-<h2>O valor da variavel é: <?= yii\helpers\Html::encode($message) ?></h2>
+<p>
+    You may change the content of this page by modifying
+    the file <code><?= __FILE__; ?></code>.
+</p>

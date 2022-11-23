@@ -4,10 +4,9 @@ namespace app\controllers;
 
 class HelloController extends \yii\web\Controller
 {
-    public function actionSaySomething($message='hello')
+    public function actionSaySomething()
     {
-        return $this->render('say-something', [
-            'message' => $message
-        ]);
+        return $this->render('say-something');
     }
+
 }
