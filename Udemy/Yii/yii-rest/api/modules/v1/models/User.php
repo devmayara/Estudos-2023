@@ -59,7 +59,7 @@ class User extends ActiveRecord implements \yii\web\IdentityInterface
         // return static::findOne(['username'=>$username,'status'=>self::ACTIVE_USER]);
 
         return static::find()->where(['username'=>$username])
-            ->orWhere(['email',$username])
+            ->orWhere(['email', $username])
             ->andWhere(['status'=>self::ACTIVE_USER])
             ->one();
     }
@@ -113,8 +113,8 @@ class User extends ActiveRecord implements \yii\web\IdentityInterface
      * @param string $password password to validate
      * @return bool if password provided is valid for current user
      */
-    public function validatePassword($password)
+    public function validatePassword($password, $userPassword)
     {
-        return \Yii::$app->security->validatePassword($password,$this->password);
+        return \Yii::$app->security->validatePassword($password, $userPassword);
     }
 }
