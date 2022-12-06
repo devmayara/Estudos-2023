@@ -2,7 +2,12 @@
 
 namespace api\modules\v1\controllers;
 
-class OauthController
-{
+use yii\rest\Controller;
 
+class OauthController extends Controller
+{
+    public function actionSignup()
+    {
+        echo 'ola';
+    }
 }

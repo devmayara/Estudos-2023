@@ -4,6 +4,7 @@ namespace api\modules\v1\models;
 
 use yii\db\ActiveRecord;
 
+
 class User extends ActiveRecord implements \yii\web\IdentityInterface
 {
     const ACTIVE_USER = 1;
@@ -48,20 +49,38 @@ class User extends ActiveRecord implements \yii\web\IdentityInterface
     }
 
     /**
-     * Finds user by username
+     * Finds user by usename
      *
-     * @param string $username
+     * @parem string $username
      * @return static|null
      */
     public static function findByUsername($username)
     {
-        foreach (self::$users as $user) {
-            if (strcasecmp($user['username'], $username) === 0) {
-                return new static($user);
-            }
-        }
+        // return static::findOne(['username'=>$username,'status'=>self::ACTIVE_USER]);
 
-        return null;
+        return static::find()->where(['username'=>$username])
+            ->orWhere(['email',$username])
+            ->andWhere(['status'=>self::ACTIVE_USER])
+            ->one();
+    }
+
+    /**
+     * Encrypt password
+     *
+     * @param $password
+     * @throws \yii\base\Exception
+     */
+    public function setPassword($password)
+    {
+        $this->password = \Yii::$app->security->generatePasswordHash($password);
+    }
+
+    /**
+     * Gerenate random string for authentiction
+     */
+    public function generateAuthKey()
+    {
+        $this->auth_key = \Yii::$app->security->generateRandomString();
     }
 
     /**
@@ -69,7 +88,7 @@ class User extends ActiveRecord implements \yii\web\IdentityInterface
      */
     public function getId()
     {
-        return $this->id;
+        return $this->getPrimaryKey();
     }
 
     /**
@@ -77,7 +96,7 @@ class User extends ActiveRecord implements \yii\web\IdentityInterface
      */
     public function getAuthKey()
     {
-        return $this->authKey;
+        return $this->auth_key;
     }
 
     /**
@@ -96,6 +115,6 @@ class User extends ActiveRecord implements \yii\web\IdentityInterface
      */
     public function validatePassword($password)
     {
-        return $this->password === $password;
+        return \Yii::$app->security->validatePassword($password,$this->password);
     }
 }
