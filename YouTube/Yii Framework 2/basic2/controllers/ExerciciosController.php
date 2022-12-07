@@ -4,7 +4,9 @@ namespace app\controllers;
 
 use Yii;
 use app\models\CadastroModel;
+use app\models\Pessoas;
 use yii\base\Controller;
+use yii\data\Pagination;
 
 class ExerciciosController extends Controller
 {
@@ -25,4 +27,29 @@ class ExerciciosController extends Controller
 
     }
 
+    public function actionPessoas()
+    {
+        // $pessoas = Pessoas::find()->orderBy('nome')->all();
+        // echo '<pre>'; print_r($pessoas);
+
+        // $pessoas = Pessoas::findOne(2);
+        // echo $pessoas->nome;
+
+        $query = Pessoas::find();
+
+        $pagination = new Pagination([
+            'defaultPageSize' => 1,
+            'totalCount' => $query->count(),
+        ]);
+
+        $pessoas = $query->orderBy('nome')
+                         ->offset($pagination->offset)
+                         ->limit($pagination->limit)
+                         ->all();
+                        
+        return $this->render('pessoas', [
+            'pessoas' => $pessoas,
+            'pagination' => $pagination
+        ]);
+    }
 }
