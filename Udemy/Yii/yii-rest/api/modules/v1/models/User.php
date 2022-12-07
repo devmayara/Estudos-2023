@@ -113,7 +113,12 @@ class User extends ActiveRecord implements \yii\web\IdentityInterface
      * @param string $password password to validate
      * @return bool if password provided is valid for current user
      */
-    public function validatePassword($password, $userPassword)
+    public function validatePassword($password)
+    {
+        return \Yii::$app->security->validatePassword($password, $this->password);
+    }
+
+    public function validatePasswordBasic($password, $userPassword)
     {
         return \Yii::$app->security->validatePassword($password, $userPassword);
     }

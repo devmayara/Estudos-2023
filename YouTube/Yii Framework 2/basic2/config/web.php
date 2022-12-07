@@ -1,7 +1,7 @@
 <?php
 
 $params = require __DIR__ . '/params.php';
-$db = require __DIR__ . '/../../blog/config/db.php';
+$db = require __DIR__ . '/db.php';
 
 $config = [
     'id' => 'basic',
@@ -11,30 +11,20 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
-    'modules' => [
-        'v1' => [
-            'class' => 'api\modules\v1\Module',
-        ],
-    ],
     'components' => [
-        'response' => [
-            'format' => \yii\web\Response::FORMAT_JSON
-        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            // 'cookieValidationKey' => 's3d-jRDWTw_GrvPTN8P7T4kOdonV56N-',
-            'enableCookieValidation' => false,
-            'enableCsrfValidation' => false,
-            'parsers' => [
-                'application/json' => 'yii\web\JsonParser',
-            ],
+            'cookieValidationKey' => 't_YWmoCXyiTSvd--Mknnn4aHu3eY2bxm',
         ],
-        // 'cache' => [
-        //     'class' => 'yii\caching\FileCache',
-        // ],
+        'cache' => [
+            'class' => 'yii\caching\FileCache',
+        ],
         'user' => [
-            'identityClass' => 'api\modules\v1\models\User',
+            'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
+        ],
+        'errorHandler' => [
+            'errorAction' => 'site/error',
         ],
         'mailer' => [
             'class' => \yii\symfonymailer\Mailer::class,
@@ -52,20 +42,14 @@ $config = [
             ],
         ],
         'db' => $db,
+        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            // 'enableStrictParsing'=>true,
             'rules' => [
-                [
-                    'class' => 'yii\rest\UrlRule', 
-                    'controller' => 'v1/posts'
-                ],
-
-                // 'v1/dashboard/<name:\w+>/<age:\w+>'=>'v1/default/index',
-                // 'v1/default/index/<name:\w+>/<age:\w+>'=>'v1/default/index'
             ],
         ],
+        */
     ],
     'params' => $params,
 ];

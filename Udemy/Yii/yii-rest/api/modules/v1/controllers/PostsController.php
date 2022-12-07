@@ -35,7 +35,7 @@ class PostsController extends ActiveController
             'class' => HttpBasicAuth::className(),
             'auth' => function($username, $password) {
                 $user = User::findByUsername($username);
-                if($user && $user->validatePassword($password, $user->password)) {
+                if($user && $user->validatePasswordBasic($password, $user->password)) {
                     return $user;
                 }
             }

@@ -10072,3 +10072,1611 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1670358103.4195
     'REQUEST_TIME' => 1670358103
 ]
+2022-12-07 12:54:20 [::1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+2022-12-07 12:54:20 [::1][-][-][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Operator 'EMAIL' requires two operands. in C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\SimpleCondition.php:79
+Stack trace:
+#0 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1606): yii\db\conditions\SimpleCondition::fromArrayDefinition('EMAIL', Array)
+#1 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1576): yii\db\QueryBuilder->createConditionFromArray(Array)
+#2 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(60): yii\db\QueryBuilder->buildCondition(Array, Array)
+#3 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(35): yii\db\conditions\ConjunctionConditionBuilder->buildExpressionsFrom(Array, Array)
+#4 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(288): yii\db\conditions\ConjunctionConditionBuilder->build(Object(yii\db\conditions\OrCondition), Array)
+#5 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1580): yii\db\QueryBuilder->buildExpression(Object(yii\db\conditions\OrCondition), Array)
+#6 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(60): yii\db\QueryBuilder->buildCondition(Object(yii\db\conditions\OrCondition), Array)
+#7 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(35): yii\db\conditions\ConjunctionConditionBuilder->buildExpressionsFrom(Array, Array)
+#8 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(288): yii\db\conditions\ConjunctionConditionBuilder->build(Object(yii\db\conditions\AndCondition), Array)
+#9 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1580): yii\db\QueryBuilder->buildExpression(Object(yii\db\conditions\AndCondition), Array)
+#10 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1357): yii\db\QueryBuilder->buildCondition(Object(yii\db\conditions\AndCondition), Array)
+#11 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(235): yii\db\QueryBuilder->buildWhere(Array, Array)
+#12 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\ActiveQuery.php(328): yii\db\QueryBuilder->build(Object(yii\db\Query))
+#13 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\Query.php(287): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\ActiveQuery.php(304): yii\db\Query->one(NULL)
+#15 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\modules\v1\models\User.php(64): yii\db\ActiveQuery->one()
+#16 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\modules\v1\controllers\PostsController.php(37): api\modules\v1\models\User::findByUsername('mayara@id5.com')
+#17 [internal function]: api\modules\v1\controllers\PostsController->api\modules\v1\controllers\{closure}('mayara@id5.com', 'passtest')
+#18 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\filters\auth\HttpBasicAuth.php(99): call_user_func(Object(Closure), 'mayara@id5.com', 'passtest')
+#19 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(59): yii\filters\auth\HttpBasicAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#20 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#21 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#22 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Component.php(633): call_user_func(Array, Object(yii\base\ActionEvent))
+#23 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Controller.php(297): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#24 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Controller.php(222): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#25 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Controller.php(176): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#26 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('index', Array)
+#27 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/posts/index', Array)
+#28 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#29 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\index.php(14): yii\base\Application->run()
+#30 {main}
+2022-12-07 12:54:20 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '6570edc1-5663-42bd-8060-889bec59095e'
+    'HTTP_HOST' => 'localhost:8074'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python311\\Scripts\\;C:\\Python311\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\composer;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\mayar\\AppData\\Local\\Android\\Sdk\\platform-tools;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30 Server at localhost Port 8074</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8074'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/Users/mayar/OneDrive/Documentos/www/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'REMOTE_PORT' => '62352'
+    'REDIRECT_URL' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/posts'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/posts'
+    'SCRIPT_NAME' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'PHP_SELF' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1670414060.1152
+    'REQUEST_TIME' => 1670414060
+]
+2022-12-07 12:55:46 [::1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+2022-12-07 12:55:46 [::1][-][-][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Operator 'EMAIL' requires two operands. in C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\SimpleCondition.php:79
+Stack trace:
+#0 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1606): yii\db\conditions\SimpleCondition::fromArrayDefinition('EMAIL', Array)
+#1 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1576): yii\db\QueryBuilder->createConditionFromArray(Array)
+#2 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(60): yii\db\QueryBuilder->buildCondition(Array, Array)
+#3 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(35): yii\db\conditions\ConjunctionConditionBuilder->buildExpressionsFrom(Array, Array)
+#4 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(288): yii\db\conditions\ConjunctionConditionBuilder->build(Object(yii\db\conditions\OrCondition), Array)
+#5 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1580): yii\db\QueryBuilder->buildExpression(Object(yii\db\conditions\OrCondition), Array)
+#6 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(60): yii\db\QueryBuilder->buildCondition(Object(yii\db\conditions\OrCondition), Array)
+#7 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(35): yii\db\conditions\ConjunctionConditionBuilder->buildExpressionsFrom(Array, Array)
+#8 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(288): yii\db\conditions\ConjunctionConditionBuilder->build(Object(yii\db\conditions\AndCondition), Array)
+#9 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1580): yii\db\QueryBuilder->buildExpression(Object(yii\db\conditions\AndCondition), Array)
+#10 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1357): yii\db\QueryBuilder->buildCondition(Object(yii\db\conditions\AndCondition), Array)
+#11 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(235): yii\db\QueryBuilder->buildWhere(Array, Array)
+#12 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\ActiveQuery.php(328): yii\db\QueryBuilder->build(Object(yii\db\Query))
+#13 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\Query.php(287): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\ActiveQuery.php(304): yii\db\Query->one(NULL)
+#15 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\modules\v1\models\User.php(64): yii\db\ActiveQuery->one()
+#16 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\modules\v1\controllers\PostsController.php(37): api\modules\v1\models\User::findByUsername('mayara@id5.com')
+#17 [internal function]: api\modules\v1\controllers\PostsController->api\modules\v1\controllers\{closure}('mayara@id5.com', 'passtest')
+#18 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\filters\auth\HttpBasicAuth.php(99): call_user_func(Object(Closure), 'mayara@id5.com', 'passtest')
+#19 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(59): yii\filters\auth\HttpBasicAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#20 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#21 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#22 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Component.php(633): call_user_func(Array, Object(yii\base\ActionEvent))
+#23 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Controller.php(297): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#24 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Controller.php(222): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#25 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Controller.php(176): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#26 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('index', Array)
+#27 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/posts/index', Array)
+#28 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#29 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\index.php(14): yii\base\Application->run()
+#30 {main}
+2022-12-07 12:55:46 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'bfcd5047-09fb-4c72-ab2a-48700c92d240'
+    'HTTP_HOST' => 'localhost:8074'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python311\\Scripts\\;C:\\Python311\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\composer;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\mayar\\AppData\\Local\\Android\\Sdk\\platform-tools;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30 Server at localhost Port 8074</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8074'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/Users/mayar/OneDrive/Documentos/www/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'REMOTE_PORT' => '56662'
+    'REDIRECT_URL' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/posts'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/posts'
+    'SCRIPT_NAME' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'PHP_SELF' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1670414146.3483
+    'REQUEST_TIME' => 1670414146
+]
+2022-12-07 12:56:09 [::1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+2022-12-07 12:56:09 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/posts/options in C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Controller.php:149
+Stack trace:
+#0 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('options', Array)
+#1 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/posts/option...', Array)
+#2 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\index.php(14): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\index.php(14): yii\base\Application->run()
+#2 {main}
+2022-12-07 12:56:09 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8074'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCESS_CONTROL_REQUEST_METHOD' => 'GET'
+    'HTTP_ACCESS_CONTROL_REQUEST_PRIVATE_NETWORK' => 'true'
+    'HTTP_ORIGIN' => 'https://resttesttest.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'cross-site'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python311\\Scripts\\;C:\\Python311\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\composer;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\mayar\\AppData\\Local\\Android\\Sdk\\platform-tools;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30 Server at localhost Port 8074</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8074'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/Users/mayar/OneDrive/Documentos/www/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'REMOTE_PORT' => '58059'
+    'REDIRECT_URL' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/posts'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'OPTIONS'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/posts'
+    'SCRIPT_NAME' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'PHP_SELF' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'REQUEST_TIME_FLOAT' => 1670414169.6441
+    'REQUEST_TIME' => 1670414169
+]
+2022-12-07 12:56:10 [::1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+2022-12-07 12:56:10 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Component.php(633): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Controller.php(297): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Controller.php(222): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Controller.php(176): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('index', Array)
+#8 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/posts/index', Array)
+#9 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\index.php(14): yii\base\Application->run()
+#11 {main}
+2022-12-07 12:56:09 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8074'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"'
+    'HTTP_ACCEPT' => '*/*'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ORIGIN' => 'https://resttesttest.com'
+    'HTTP_SEC_FETCH_SITE' => 'cross-site'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python311\\Scripts\\;C:\\Python311\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\composer;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\mayar\\AppData\\Local\\Android\\Sdk\\platform-tools;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30 Server at localhost Port 8074</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8074'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/Users/mayar/OneDrive/Documentos/www/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'REMOTE_PORT' => '58060'
+    'REDIRECT_URL' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/posts'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/posts'
+    'SCRIPT_NAME' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'PHP_SELF' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'REQUEST_TIME_FLOAT' => 1670414169.8643
+    'REQUEST_TIME' => 1670414169
+]
+2022-12-07 12:56:46 [::1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+2022-12-07 12:56:47 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/posts/options in C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Controller.php:149
+Stack trace:
+#0 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('options', Array)
+#1 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/posts/option...', Array)
+#2 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\index.php(14): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\index.php(14): yii\base\Application->run()
+#2 {main}
+2022-12-07 12:56:46 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8074'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCESS_CONTROL_REQUEST_METHOD' => 'GET'
+    'HTTP_ACCESS_CONTROL_REQUEST_PRIVATE_NETWORK' => 'true'
+    'HTTP_ORIGIN' => 'https://resttesttest.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'cross-site'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python311\\Scripts\\;C:\\Python311\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\composer;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\mayar\\AppData\\Local\\Android\\Sdk\\platform-tools;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30 Server at localhost Port 8074</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8074'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/Users/mayar/OneDrive/Documentos/www/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'REMOTE_PORT' => '61152'
+    'REDIRECT_URL' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/posts'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'OPTIONS'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/posts'
+    'SCRIPT_NAME' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'PHP_SELF' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'REQUEST_TIME_FLOAT' => 1670414206.85
+    'REQUEST_TIME' => 1670414206
+]
+2022-12-07 12:56:47 [::1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+2022-12-07 12:56:47 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Component.php(633): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Controller.php(297): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Controller.php(222): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Controller.php(176): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('index', Array)
+#8 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/posts/index', Array)
+#9 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\index.php(14): yii\base\Application->run()
+#11 {main}
+2022-12-07 12:56:47 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8074'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"'
+    'HTTP_ACCEPT' => '*/*'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ORIGIN' => 'https://resttesttest.com'
+    'HTTP_SEC_FETCH_SITE' => 'cross-site'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python311\\Scripts\\;C:\\Python311\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\composer;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\mayar\\AppData\\Local\\Android\\Sdk\\platform-tools;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30 Server at localhost Port 8074</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8074'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/Users/mayar/OneDrive/Documentos/www/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'REMOTE_PORT' => '61156'
+    'REDIRECT_URL' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/posts'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/posts'
+    'SCRIPT_NAME' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'PHP_SELF' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'REQUEST_TIME_FLOAT' => 1670414207.0685
+    'REQUEST_TIME' => 1670414207
+]
+2022-12-07 12:58:17 [::1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+2022-12-07 12:58:17 [::1][-][-][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Operator 'EMAIL' requires two operands. in C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\SimpleCondition.php:79
+Stack trace:
+#0 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1606): yii\db\conditions\SimpleCondition::fromArrayDefinition('EMAIL', Array)
+#1 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1576): yii\db\QueryBuilder->createConditionFromArray(Array)
+#2 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(60): yii\db\QueryBuilder->buildCondition(Array, Array)
+#3 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(35): yii\db\conditions\ConjunctionConditionBuilder->buildExpressionsFrom(Array, Array)
+#4 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(288): yii\db\conditions\ConjunctionConditionBuilder->build(Object(yii\db\conditions\OrCondition), Array)
+#5 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1580): yii\db\QueryBuilder->buildExpression(Object(yii\db\conditions\OrCondition), Array)
+#6 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(60): yii\db\QueryBuilder->buildCondition(Object(yii\db\conditions\OrCondition), Array)
+#7 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(35): yii\db\conditions\ConjunctionConditionBuilder->buildExpressionsFrom(Array, Array)
+#8 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(288): yii\db\conditions\ConjunctionConditionBuilder->build(Object(yii\db\conditions\AndCondition), Array)
+#9 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1580): yii\db\QueryBuilder->buildExpression(Object(yii\db\conditions\AndCondition), Array)
+#10 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1357): yii\db\QueryBuilder->buildCondition(Object(yii\db\conditions\AndCondition), Array)
+#11 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(235): yii\db\QueryBuilder->buildWhere(Array, Array)
+#12 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\ActiveQuery.php(328): yii\db\QueryBuilder->build(Object(yii\db\Query))
+#13 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\Query.php(287): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\ActiveQuery.php(304): yii\db\Query->one(NULL)
+#15 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\modules\v1\models\User.php(64): yii\db\ActiveQuery->one()
+#16 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\modules\v1\controllers\PostsController.php(37): api\modules\v1\models\User::findByUsername('')
+#17 [internal function]: api\modules\v1\controllers\PostsController->api\modules\v1\controllers\{closure}('', '')
+#18 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\filters\auth\HttpBasicAuth.php(99): call_user_func(Object(Closure), '', '')
+#19 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(59): yii\filters\auth\HttpBasicAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#20 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#21 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#22 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Component.php(633): call_user_func(Array, Object(yii\base\ActionEvent))
+#23 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Controller.php(297): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#24 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Controller.php(222): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#25 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Controller.php(176): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#26 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('index', Array)
+#27 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/posts/index', Array)
+#28 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#29 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\index.php(14): yii\base\Application->run()
+#30 {main}
+2022-12-07 12:58:17 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '87f79533-810e-41e0-a964-426e1b892463'
+    'HTTP_HOST' => 'localhost:8074'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python311\\Scripts\\;C:\\Python311\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\composer;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\mayar\\AppData\\Local\\Android\\Sdk\\platform-tools;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30 Server at localhost Port 8074</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8074'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/Users/mayar/OneDrive/Documentos/www/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'REMOTE_PORT' => '55426'
+    'REDIRECT_URL' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/posts'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/posts'
+    'SCRIPT_NAME' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'PHP_SELF' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1670414296.9777
+    'REQUEST_TIME' => 1670414296
+]
+2022-12-07 12:58:29 [::1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+2022-12-07 12:58:29 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '5ce4312a-5e1c-467a-bf43-c14009a7ef39'
+    'HTTP_HOST' => 'localhost:8074'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '130'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python311\\Scripts\\;C:\\Python311\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\composer;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\mayar\\AppData\\Local\\Android\\Sdk\\platform-tools;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30 Server at localhost Port 8074</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8074'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/Users/mayar/OneDrive/Documentos/www/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'REMOTE_PORT' => '55434'
+    'REDIRECT_URL' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/oauth/signup/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/oauth/signup/'
+    'SCRIPT_NAME' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'PHP_SELF' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'REQUEST_TIME_FLOAT' => 1670414309.1692
+    'REQUEST_TIME' => 1670414309
+]
+2022-12-07 12:58:54 [::1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+2022-12-07 12:58:54 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'a37995c5-f378-4f48-ad65-ec54e91cd864'
+    'HTTP_HOST' => 'localhost:8074'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '126'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python311\\Scripts\\;C:\\Python311\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\composer;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\mayar\\AppData\\Local\\Android\\Sdk\\platform-tools;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30 Server at localhost Port 8074</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8074'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/Users/mayar/OneDrive/Documentos/www/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'REMOTE_PORT' => '63901'
+    'REDIRECT_URL' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/oauth/signup/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/oauth/signup/'
+    'SCRIPT_NAME' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'PHP_SELF' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'REQUEST_TIME_FLOAT' => 1670414334.0269
+    'REQUEST_TIME' => 1670414334
+]
+2022-12-07 12:59:09 [::1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+2022-12-07 12:59:09 [::1][-][-][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Operator 'EMAIL' requires two operands. in C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\SimpleCondition.php:79
+Stack trace:
+#0 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1606): yii\db\conditions\SimpleCondition::fromArrayDefinition('EMAIL', Array)
+#1 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1576): yii\db\QueryBuilder->createConditionFromArray(Array)
+#2 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(60): yii\db\QueryBuilder->buildCondition(Array, Array)
+#3 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(35): yii\db\conditions\ConjunctionConditionBuilder->buildExpressionsFrom(Array, Array)
+#4 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(288): yii\db\conditions\ConjunctionConditionBuilder->build(Object(yii\db\conditions\OrCondition), Array)
+#5 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1580): yii\db\QueryBuilder->buildExpression(Object(yii\db\conditions\OrCondition), Array)
+#6 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(60): yii\db\QueryBuilder->buildCondition(Object(yii\db\conditions\OrCondition), Array)
+#7 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(35): yii\db\conditions\ConjunctionConditionBuilder->buildExpressionsFrom(Array, Array)
+#8 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(288): yii\db\conditions\ConjunctionConditionBuilder->build(Object(yii\db\conditions\AndCondition), Array)
+#9 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1580): yii\db\QueryBuilder->buildExpression(Object(yii\db\conditions\AndCondition), Array)
+#10 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1357): yii\db\QueryBuilder->buildCondition(Object(yii\db\conditions\AndCondition), Array)
+#11 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(235): yii\db\QueryBuilder->buildWhere(Array, Array)
+#12 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\ActiveQuery.php(328): yii\db\QueryBuilder->build(Object(yii\db\Query))
+#13 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\Query.php(287): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\ActiveQuery.php(304): yii\db\Query->one(NULL)
+#15 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\modules\v1\models\User.php(64): yii\db\ActiveQuery->one()
+#16 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\modules\v1\controllers\PostsController.php(37): api\modules\v1\models\User::findByUsername('mayara@email.co...')
+#17 [internal function]: api\modules\v1\controllers\PostsController->api\modules\v1\controllers\{closure}('mayara@email.co...', 'passtest')
+#18 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\filters\auth\HttpBasicAuth.php(99): call_user_func(Object(Closure), 'mayara@email.co...', 'passtest')
+#19 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(59): yii\filters\auth\HttpBasicAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#20 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#21 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#22 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Component.php(633): call_user_func(Array, Object(yii\base\ActionEvent))
+#23 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Controller.php(297): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#24 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Controller.php(222): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#25 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Controller.php(176): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#26 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('index', Array)
+#27 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/posts/index', Array)
+#28 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#29 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\index.php(14): yii\base\Application->run()
+#30 {main}
+2022-12-07 12:59:09 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'fcaa73a0-dc80-454c-a2ad-64f826fdfb22'
+    'HTTP_HOST' => 'localhost:8074'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python311\\Scripts\\;C:\\Python311\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\composer;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\mayar\\AppData\\Local\\Android\\Sdk\\platform-tools;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30 Server at localhost Port 8074</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8074'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/Users/mayar/OneDrive/Documentos/www/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'REMOTE_PORT' => '64858'
+    'REDIRECT_URL' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/posts'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/posts'
+    'SCRIPT_NAME' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'PHP_SELF' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1670414349.0776
+    'REQUEST_TIME' => 1670414349
+]
+2022-12-07 12:59:16 [::1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+2022-12-07 12:59:16 [::1][-][-][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Operator 'EMAIL' requires two operands. in C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\SimpleCondition.php:79
+Stack trace:
+#0 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1606): yii\db\conditions\SimpleCondition::fromArrayDefinition('EMAIL', Array)
+#1 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1576): yii\db\QueryBuilder->createConditionFromArray(Array)
+#2 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(60): yii\db\QueryBuilder->buildCondition(Array, Array)
+#3 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(35): yii\db\conditions\ConjunctionConditionBuilder->buildExpressionsFrom(Array, Array)
+#4 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(288): yii\db\conditions\ConjunctionConditionBuilder->build(Object(yii\db\conditions\OrCondition), Array)
+#5 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1580): yii\db\QueryBuilder->buildExpression(Object(yii\db\conditions\OrCondition), Array)
+#6 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(60): yii\db\QueryBuilder->buildCondition(Object(yii\db\conditions\OrCondition), Array)
+#7 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(35): yii\db\conditions\ConjunctionConditionBuilder->buildExpressionsFrom(Array, Array)
+#8 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(288): yii\db\conditions\ConjunctionConditionBuilder->build(Object(yii\db\conditions\AndCondition), Array)
+#9 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1580): yii\db\QueryBuilder->buildExpression(Object(yii\db\conditions\AndCondition), Array)
+#10 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1357): yii\db\QueryBuilder->buildCondition(Object(yii\db\conditions\AndCondition), Array)
+#11 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(235): yii\db\QueryBuilder->buildWhere(Array, Array)
+#12 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\ActiveQuery.php(328): yii\db\QueryBuilder->build(Object(yii\db\Query))
+#13 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\Query.php(287): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\ActiveQuery.php(304): yii\db\Query->one(NULL)
+#15 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\modules\v1\models\User.php(64): yii\db\ActiveQuery->one()
+#16 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\modules\v1\controllers\PostsController.php(37): api\modules\v1\models\User::findByUsername('mayara')
+#17 [internal function]: api\modules\v1\controllers\PostsController->api\modules\v1\controllers\{closure}('mayara', 'passtest')
+#18 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\filters\auth\HttpBasicAuth.php(99): call_user_func(Object(Closure), 'mayara', 'passtest')
+#19 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(59): yii\filters\auth\HttpBasicAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#20 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#21 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#22 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Component.php(633): call_user_func(Array, Object(yii\base\ActionEvent))
+#23 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Controller.php(297): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#24 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Controller.php(222): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#25 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Controller.php(176): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#26 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('index', Array)
+#27 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/posts/index', Array)
+#28 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#29 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\index.php(14): yii\base\Application->run()
+#30 {main}
+2022-12-07 12:59:16 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'fe85c519-f792-4694-8446-1b058d5260de'
+    'HTTP_HOST' => 'localhost:8074'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python311\\Scripts\\;C:\\Python311\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\composer;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\mayar\\AppData\\Local\\Android\\Sdk\\platform-tools;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30 Server at localhost Port 8074</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8074'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/Users/mayar/OneDrive/Documentos/www/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'REMOTE_PORT' => '64861'
+    'REDIRECT_URL' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/posts'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/posts'
+    'SCRIPT_NAME' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'PHP_SELF' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1670414356.1968
+    'REQUEST_TIME' => 1670414356
+]
+2022-12-07 12:59:25 [::1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+2022-12-07 12:59:25 [::1][-][-][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Operator 'EMAIL' requires two operands. in C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\SimpleCondition.php:79
+Stack trace:
+#0 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1606): yii\db\conditions\SimpleCondition::fromArrayDefinition('EMAIL', Array)
+#1 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1576): yii\db\QueryBuilder->createConditionFromArray(Array)
+#2 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(60): yii\db\QueryBuilder->buildCondition(Array, Array)
+#3 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(35): yii\db\conditions\ConjunctionConditionBuilder->buildExpressionsFrom(Array, Array)
+#4 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(288): yii\db\conditions\ConjunctionConditionBuilder->build(Object(yii\db\conditions\OrCondition), Array)
+#5 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1580): yii\db\QueryBuilder->buildExpression(Object(yii\db\conditions\OrCondition), Array)
+#6 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(60): yii\db\QueryBuilder->buildCondition(Object(yii\db\conditions\OrCondition), Array)
+#7 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(35): yii\db\conditions\ConjunctionConditionBuilder->buildExpressionsFrom(Array, Array)
+#8 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(288): yii\db\conditions\ConjunctionConditionBuilder->build(Object(yii\db\conditions\AndCondition), Array)
+#9 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1580): yii\db\QueryBuilder->buildExpression(Object(yii\db\conditions\AndCondition), Array)
+#10 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1357): yii\db\QueryBuilder->buildCondition(Object(yii\db\conditions\AndCondition), Array)
+#11 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(235): yii\db\QueryBuilder->buildWhere(Array, Array)
+#12 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\ActiveQuery.php(328): yii\db\QueryBuilder->build(Object(yii\db\Query))
+#13 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\Query.php(287): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\ActiveQuery.php(304): yii\db\Query->one(NULL)
+#15 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\modules\v1\models\User.php(64): yii\db\ActiveQuery->one()
+#16 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\modules\v1\controllers\PostsController.php(37): api\modules\v1\models\User::findByUsername('mayara')
+#17 [internal function]: api\modules\v1\controllers\PostsController->api\modules\v1\controllers\{closure}('mayara', 'passtest')
+#18 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\filters\auth\HttpBasicAuth.php(99): call_user_func(Object(Closure), 'mayara', 'passtest')
+#19 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(59): yii\filters\auth\HttpBasicAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#20 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#21 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#22 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Component.php(633): call_user_func(Array, Object(yii\base\ActionEvent))
+#23 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Controller.php(297): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#24 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Controller.php(222): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#25 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Controller.php(176): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#26 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('index', Array)
+#27 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/posts/index', Array)
+#28 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#29 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\index.php(14): yii\base\Application->run()
+#30 {main}
+2022-12-07 12:59:25 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '7cf3068b-36a7-4e6d-9428-64775702b2f4'
+    'HTTP_HOST' => 'localhost:8074'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python311\\Scripts\\;C:\\Python311\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\composer;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\mayar\\AppData\\Local\\Android\\Sdk\\platform-tools;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30 Server at localhost Port 8074</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8074'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/Users/mayar/OneDrive/Documentos/www/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'REMOTE_PORT' => '54652'
+    'REDIRECT_URL' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/posts'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/posts'
+    'SCRIPT_NAME' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'PHP_SELF' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1670414365.1919
+    'REQUEST_TIME' => 1670414365
+]
+2022-12-07 12:59:35 [::1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+2022-12-07 12:59:35 [::1][-][-][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Operator 'EMAIL' requires two operands. in C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\SimpleCondition.php:79
+Stack trace:
+#0 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1606): yii\db\conditions\SimpleCondition::fromArrayDefinition('EMAIL', Array)
+#1 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1576): yii\db\QueryBuilder->createConditionFromArray(Array)
+#2 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(60): yii\db\QueryBuilder->buildCondition(Array, Array)
+#3 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(35): yii\db\conditions\ConjunctionConditionBuilder->buildExpressionsFrom(Array, Array)
+#4 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(288): yii\db\conditions\ConjunctionConditionBuilder->build(Object(yii\db\conditions\OrCondition), Array)
+#5 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1580): yii\db\QueryBuilder->buildExpression(Object(yii\db\conditions\OrCondition), Array)
+#6 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(60): yii\db\QueryBuilder->buildCondition(Object(yii\db\conditions\OrCondition), Array)
+#7 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(35): yii\db\conditions\ConjunctionConditionBuilder->buildExpressionsFrom(Array, Array)
+#8 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(288): yii\db\conditions\ConjunctionConditionBuilder->build(Object(yii\db\conditions\AndCondition), Array)
+#9 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1580): yii\db\QueryBuilder->buildExpression(Object(yii\db\conditions\AndCondition), Array)
+#10 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1357): yii\db\QueryBuilder->buildCondition(Object(yii\db\conditions\AndCondition), Array)
+#11 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(235): yii\db\QueryBuilder->buildWhere(Array, Array)
+#12 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\ActiveQuery.php(328): yii\db\QueryBuilder->build(Object(yii\db\Query))
+#13 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\Query.php(287): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\ActiveQuery.php(304): yii\db\Query->one(NULL)
+#15 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\modules\v1\models\User.php(64): yii\db\ActiveQuery->one()
+#16 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\modules\v1\controllers\PostsController.php(37): api\modules\v1\models\User::findByUsername('mayara_id5')
+#17 [internal function]: api\modules\v1\controllers\PostsController->api\modules\v1\controllers\{closure}('mayara_id5', 'passteste')
+#18 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\filters\auth\HttpBasicAuth.php(99): call_user_func(Object(Closure), 'mayara_id5', 'passteste')
+#19 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(59): yii\filters\auth\HttpBasicAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#20 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#21 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#22 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Component.php(633): call_user_func(Array, Object(yii\base\ActionEvent))
+#23 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Controller.php(297): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#24 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Controller.php(222): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#25 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Controller.php(176): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#26 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('index', Array)
+#27 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/posts/index', Array)
+#28 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#29 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\index.php(14): yii\base\Application->run()
+#30 {main}
+2022-12-07 12:59:35 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '612daf6a-6ca2-46ac-abf8-77ae449c7695'
+    'HTTP_HOST' => 'localhost:8074'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python311\\Scripts\\;C:\\Python311\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\composer;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\mayar\\AppData\\Local\\Android\\Sdk\\platform-tools;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30 Server at localhost Port 8074</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8074'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/Users/mayar/OneDrive/Documentos/www/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'REMOTE_PORT' => '52745'
+    'REDIRECT_URL' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/posts'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/posts'
+    'SCRIPT_NAME' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'PHP_SELF' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1670414375.0684
+    'REQUEST_TIME' => 1670414375
+]
+2022-12-07 13:00:08 [::1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+2022-12-07 13:00:08 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/posts/options in C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Controller.php:149
+Stack trace:
+#0 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('options', Array)
+#1 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/posts/option...', Array)
+#2 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\index.php(14): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\index.php(14): yii\base\Application->run()
+#2 {main}
+2022-12-07 13:00:08 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8074'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCESS_CONTROL_REQUEST_METHOD' => 'GET'
+    'HTTP_ACCESS_CONTROL_REQUEST_PRIVATE_NETWORK' => 'true'
+    'HTTP_ORIGIN' => 'https://resttesttest.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'cross-site'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python311\\Scripts\\;C:\\Python311\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\composer;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\mayar\\AppData\\Local\\Android\\Sdk\\platform-tools;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30 Server at localhost Port 8074</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8074'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/Users/mayar/OneDrive/Documentos/www/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'REMOTE_PORT' => '49304'
+    'REDIRECT_URL' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/posts'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'OPTIONS'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/posts'
+    'SCRIPT_NAME' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'PHP_SELF' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'REQUEST_TIME_FLOAT' => 1670414408.6236
+    'REQUEST_TIME' => 1670414408
+]
+2022-12-07 13:00:08 [::1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+2022-12-07 13:00:08 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Component.php(633): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Controller.php(297): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Controller.php(222): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Controller.php(176): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('index', Array)
+#8 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/posts/index', Array)
+#9 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\index.php(14): yii\base\Application->run()
+#11 {main}
+2022-12-07 13:00:08 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8074'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"'
+    'HTTP_ACCEPT' => '*/*'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ORIGIN' => 'https://resttesttest.com'
+    'HTTP_SEC_FETCH_SITE' => 'cross-site'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python311\\Scripts\\;C:\\Python311\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\composer;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\mayar\\AppData\\Local\\Android\\Sdk\\platform-tools;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30 Server at localhost Port 8074</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8074'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/Users/mayar/OneDrive/Documentos/www/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'REMOTE_PORT' => '49304'
+    'REDIRECT_URL' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/posts'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/posts'
+    'SCRIPT_NAME' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'PHP_SELF' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'REQUEST_TIME_FLOAT' => 1670414408.8217
+    'REQUEST_TIME' => 1670414408
+]
+2022-12-07 13:00:18 [::1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+2022-12-07 13:00:18 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/posts/options in C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Controller.php:149
+Stack trace:
+#0 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('options', Array)
+#1 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/posts/option...', Array)
+#2 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\index.php(14): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\index.php(14): yii\base\Application->run()
+#2 {main}
+2022-12-07 13:00:17 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8074'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCESS_CONTROL_REQUEST_METHOD' => 'GET'
+    'HTTP_ACCESS_CONTROL_REQUEST_PRIVATE_NETWORK' => 'true'
+    'HTTP_ORIGIN' => 'https://resttesttest.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'cross-site'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python311\\Scripts\\;C:\\Python311\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\composer;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\mayar\\AppData\\Local\\Android\\Sdk\\platform-tools;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30 Server at localhost Port 8074</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8074'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/Users/mayar/OneDrive/Documentos/www/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'REMOTE_PORT' => '49305'
+    'REDIRECT_URL' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/posts'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'OPTIONS'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/posts'
+    'SCRIPT_NAME' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'PHP_SELF' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'REQUEST_TIME_FLOAT' => 1670414417.9151
+    'REQUEST_TIME' => 1670414417
+]
+2022-12-07 13:00:18 [::1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+2022-12-07 13:00:18 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Component.php(633): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Controller.php(297): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Controller.php(222): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Controller.php(176): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('index', Array)
+#8 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/posts/index', Array)
+#9 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\index.php(14): yii\base\Application->run()
+#11 {main}
+2022-12-07 13:00:18 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8074'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"'
+    'HTTP_ACCEPT' => '*/*'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ORIGIN' => 'https://resttesttest.com'
+    'HTTP_SEC_FETCH_SITE' => 'cross-site'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python311\\Scripts\\;C:\\Python311\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\composer;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\mayar\\AppData\\Local\\Android\\Sdk\\platform-tools;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30 Server at localhost Port 8074</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8074'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/Users/mayar/OneDrive/Documentos/www/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'REMOTE_PORT' => '49305'
+    'REDIRECT_URL' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/posts'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/posts'
+    'SCRIPT_NAME' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'PHP_SELF' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'REQUEST_TIME_FLOAT' => 1670414418.0677
+    'REQUEST_TIME' => 1670414418
+]
+2022-12-07 13:13:42 [::1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+2022-12-07 13:13:42 [::1][-][-][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Operator 'EMAIL' requires two operands. in C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\SimpleCondition.php:79
+Stack trace:
+#0 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1606): yii\db\conditions\SimpleCondition::fromArrayDefinition('EMAIL', Array)
+#1 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1576): yii\db\QueryBuilder->createConditionFromArray(Array)
+#2 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(60): yii\db\QueryBuilder->buildCondition(Array, Array)
+#3 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(35): yii\db\conditions\ConjunctionConditionBuilder->buildExpressionsFrom(Array, Array)
+#4 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(288): yii\db\conditions\ConjunctionConditionBuilder->build(Object(yii\db\conditions\OrCondition), Array)
+#5 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1580): yii\db\QueryBuilder->buildExpression(Object(yii\db\conditions\OrCondition), Array)
+#6 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(60): yii\db\QueryBuilder->buildCondition(Object(yii\db\conditions\OrCondition), Array)
+#7 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(35): yii\db\conditions\ConjunctionConditionBuilder->buildExpressionsFrom(Array, Array)
+#8 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(288): yii\db\conditions\ConjunctionConditionBuilder->build(Object(yii\db\conditions\AndCondition), Array)
+#9 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1580): yii\db\QueryBuilder->buildExpression(Object(yii\db\conditions\AndCondition), Array)
+#10 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1357): yii\db\QueryBuilder->buildCondition(Object(yii\db\conditions\AndCondition), Array)
+#11 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(235): yii\db\QueryBuilder->buildWhere(Array, Array)
+#12 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\ActiveQuery.php(328): yii\db\QueryBuilder->build(Object(yii\db\Query))
+#13 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\Query.php(287): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\ActiveQuery.php(304): yii\db\Query->one(NULL)
+#15 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\modules\v1\models\User.php(64): yii\db\ActiveQuery->one()
+#16 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\modules\v1\models\LoginForm.php(76): api\modules\v1\models\User::findByUsername('mayara')
+#17 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\modules\v1\models\LoginForm.php(48): api\modules\v1\models\LoginForm->getUser()
+#18 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\validators\InlineValidator.php(77): api\modules\v1\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'passtest')
+#19 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\validators\Validator.php(260): yii\validators\InlineValidator->validateAttribute(Object(api\modules\v1\models\LoginForm), 'password')
+#20 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Model.php(368): yii\validators\Validator->validateAttributes(Object(api\modules\v1\models\LoginForm), Array)
+#21 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\modules\v1\models\LoginForm.php(62): yii\base\Model->validate()
+#22 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\modules\v1\controllers\OauthController.php(27): api\modules\v1\models\LoginForm->login()
+#23 [internal function]: api\modules\v1\controllers\OauthController->actionLogin()
+#24 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#25 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#26 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#27 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/oauth/login', Array)
+#28 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#29 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\index.php(14): yii\base\Application->run()
+#30 {main}
+2022-12-07 13:13:42 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '51c143b6-a3af-4aa6-b22c-0e140a850fe3'
+    'HTTP_HOST' => 'localhost:8074'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '57'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python311\\Scripts\\;C:\\Python311\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\composer;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\mayar\\AppData\\Local\\Android\\Sdk\\platform-tools;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30 Server at localhost Port 8074</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8074'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/Users/mayar/OneDrive/Documentos/www/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'REMOTE_PORT' => '62002'
+    'REDIRECT_URL' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/oauth/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/oauth/login'
+    'SCRIPT_NAME' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'PHP_SELF' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1670415222.3766
+    'REQUEST_TIME' => 1670415222
+]
+2022-12-07 13:20:37 [::1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+2022-12-07 13:20:37 [::1][-][-][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Operator 'EMAIL' requires two operands. in C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\SimpleCondition.php:79
+Stack trace:
+#0 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1606): yii\db\conditions\SimpleCondition::fromArrayDefinition('EMAIL', Array)
+#1 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1576): yii\db\QueryBuilder->createConditionFromArray(Array)
+#2 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(60): yii\db\QueryBuilder->buildCondition(Array, Array)
+#3 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(35): yii\db\conditions\ConjunctionConditionBuilder->buildExpressionsFrom(Array, Array)
+#4 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(288): yii\db\conditions\ConjunctionConditionBuilder->build(Object(yii\db\conditions\OrCondition), Array)
+#5 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1580): yii\db\QueryBuilder->buildExpression(Object(yii\db\conditions\OrCondition), Array)
+#6 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(60): yii\db\QueryBuilder->buildCondition(Object(yii\db\conditions\OrCondition), Array)
+#7 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(35): yii\db\conditions\ConjunctionConditionBuilder->buildExpressionsFrom(Array, Array)
+#8 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(288): yii\db\conditions\ConjunctionConditionBuilder->build(Object(yii\db\conditions\AndCondition), Array)
+#9 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1580): yii\db\QueryBuilder->buildExpression(Object(yii\db\conditions\AndCondition), Array)
+#10 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(1357): yii\db\QueryBuilder->buildCondition(Object(yii\db\conditions\AndCondition), Array)
+#11 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\QueryBuilder.php(235): yii\db\QueryBuilder->buildWhere(Array, Array)
+#12 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\ActiveQuery.php(328): yii\db\QueryBuilder->build(Object(yii\db\Query))
+#13 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\Query.php(287): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\db\ActiveQuery.php(304): yii\db\Query->one(NULL)
+#15 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\modules\v1\models\User.php(64): yii\db\ActiveQuery->one()
+#16 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\modules\v1\models\LoginForm.php(76): api\modules\v1\models\User::findByUsername('mayara')
+#17 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\modules\v1\models\LoginForm.php(48): api\modules\v1\models\LoginForm->getUser()
+#18 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\validators\InlineValidator.php(77): api\modules\v1\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'passtest')
+#19 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\validators\Validator.php(260): yii\validators\InlineValidator->validateAttribute(Object(api\modules\v1\models\LoginForm), 'password')
+#20 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Model.php(368): yii\validators\Validator->validateAttributes(Object(api\modules\v1\models\LoginForm), Array)
+#21 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\modules\v1\models\LoginForm.php(62): yii\base\Model->validate()
+#22 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\modules\v1\controllers\OauthController.php(27): api\modules\v1\models\LoginForm->login()
+#23 [internal function]: api\modules\v1\controllers\OauthController->actionLogin()
+#24 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#25 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#26 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#27 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/oauth/login', Array)
+#28 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\blog\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#29 C:\Users\mayar\OneDrive\Documentos\www\GitHub\Estudos-2023\Udemy\Yii\yii-rest\api\index.php(14): yii\base\Application->run()
+#30 {main}
+2022-12-07 13:20:36 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'baad767d-b6e8-4f02-b522-ed4b78efc2cd'
+    'HTTP_HOST' => 'localhost:8074'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '57'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python311\\Scripts\\;C:\\Python311\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\composer;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\mayar\\AppData\\Local\\Android\\Sdk\\platform-tools;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30 Server at localhost Port 8074</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8074'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/mayar/OneDrive/Documentos/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/Users/mayar/OneDrive/Documentos/www/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'REMOTE_PORT' => '61632'
+    'REDIRECT_URL' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/oauth/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/v1/oauth/login'
+    'SCRIPT_NAME' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'PHP_SELF' => '/GitHub/Estudos-2023/Udemy/Yii/yii-rest/api/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1670415636.0009
+    'REQUEST_TIME' => 1670415636
+]

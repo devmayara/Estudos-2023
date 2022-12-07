@@ -19,6 +19,8 @@ class Module extends \yii\base\Module
     {
         parent::init();
 
+        \Yii::$app->user->enableSession = false;
+
         // custom initialization code goes here
     }
 }
