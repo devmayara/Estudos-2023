@@ -2,9 +2,36 @@
 
 /** @var yii\web\View $this */
 
+use app\widgets\HelloBeginEndWidget;
+use yii\jui\DatePicker;
+use app\widgets\HelloWidget;
+
 $this->title = 'My Yii Application';
 ?>
 <div class="site-index">
+
+    <div>
+        
+        <?= 
+            // DatePicker::widget([
+            //     'name' => 'data_venda',
+            //     'language' => 'pt-BR',
+            //     'dateFormat' => 'dd/MM/yyyy'
+            // ]) 
+
+            HelloWidget::widget([
+                'message' => 'Olá, mundo!',
+            ])
+        ?>
+
+        <?php HelloBeginEndWidget::begin() ?>
+
+            <h2>Video Aula do Yii2 Framework</h2>
+            <h3>Vídeo Aulas produzidas</h3>
+
+        <?php HelloBeginEndWidget::end() ?>
+
+    </div>
 
     <div class="jumbotron text-center bg-transparent">
         <h1 class="display-4">Congratulations!</h1>
