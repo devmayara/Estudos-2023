@@ -10,6 +10,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use RestClient;
+use yii\helpers\Json;
 
 class SiteController extends Controller
 {
@@ -130,16 +131,17 @@ class SiteController extends Controller
     public function actionFeed()
     {
         $api = new RestClient([
-            'base_url' => 'http://localhost:8080/api',
+            'base_url' => 'http://localhost:9999/api',
             'headers' => [
                 'Accept' => 'application/json'
             ]
         ]);
 
         $result = $api->get('/default');
+        $data = Json::decode($result->response);
 
-        echo '<pre>'; print_r($result->response); die;
-
-        return $this->render('feed');
+        return $this->render('feed', [
+            'data' => $data
+        ]);
     }
 }

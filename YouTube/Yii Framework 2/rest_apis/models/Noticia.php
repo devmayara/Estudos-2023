@@ -50,6 +50,7 @@ class Noticia extends \yii\db\ActiveRecord
         ];
     }
 
+    // filtra oq sera apresentado ao usuario
     public function fields()
     {
         return [

@@ -10,4 +10,13 @@ use yii\rest\ActiveController;
 class DefaultController extends ActiveController
 {
     public $modelClass = 'app\models\Noticia';
+
+    // não permite deletar ou criar atraves de api
+    // public function actions()
+    // {
+    //     $actions = parent::actions();
+    //     unset($actions['delete'], $actions['create']);
+
+    //     return $actions;
+    // }
 }
