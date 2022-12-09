@@ -2,7 +2,12 @@
 
 namespace app\modules\financeiro\controllers;
 
-class DefaultController
-{
+use yii\web\Controller;
 
+class DefaultController extends Controller
+{
+    public function actionCreate()
+    {
+        return $this->render('create');
+    }
 }
