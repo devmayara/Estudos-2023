@@ -9,8 +9,8 @@ $config = [
     'bootstrap' => ['log'],
     // 'name' => 'Minha Aplicação',
     // 'version' => '2.5',
-    // 'laguage' => 'en',
-    // 'souceLanguage' => 'pt-BR',
+     'language' => 'pt_BR',
+     'sourceLanguage' => 'pt-BR',
     // 'timeZone' => 'America/Maceio',
     // 'charset' => 'UTF-8',
     'aliases' => [
@@ -21,6 +21,10 @@ $config = [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 't_YWmoCXyiTSvd--Mknnn4aHu3eY2bxm',
+        ],
+        'formatter' => [
+            'class' => 'app\components\MyFormatter',
+//          'dateFormat' => 'dd/MM/yyyy'
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
