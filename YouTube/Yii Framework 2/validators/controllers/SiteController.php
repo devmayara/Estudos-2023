@@ -125,4 +125,12 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+    /**
+     * @return string
+     */
+    public function actionCadastro()
+    {
+        return $this->render('cadastro');
+    }
 }
