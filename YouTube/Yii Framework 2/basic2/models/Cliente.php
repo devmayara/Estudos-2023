@@ -3,15 +3,23 @@
 namespace app\models;
 
 use Yii;
+use yii\db\ActiveRecord;
+use yii\web\UploadedFile;
 
 /**
  * This is the model class for table "{{%clientes}}".
  *
  * @property int $id
  * @property string $nome
+ * @property string $foto
  */
-class Cliente extends \yii\db\ActiveRecord
+class Cliente extends ActiveRecord
 {
+    /**
+     * @var UploadedFile
+     */
+    public $fotoCliente;
+
     /**
      * {@inheritdoc}
      */
@@ -27,7 +35,8 @@ class Cliente extends \yii\db\ActiveRecord
     {
         return [
             [['nome'], 'required'],
-            [['nome'], 'string', 'max' => 60],
+            ['fotoCliente', 'file', 'extensions' => 'jpg, png'],
+            [['nome', 'foto'], 'string', 'max' => 60],
         ];
     }
 
@@ -39,6 +48,8 @@ class Cliente extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'nome' => 'Nome',
+            'foto' => 'Foto do Cliente',
+            'fotoCliente' => 'Foto do Cliente',
         ];
     }
 }
