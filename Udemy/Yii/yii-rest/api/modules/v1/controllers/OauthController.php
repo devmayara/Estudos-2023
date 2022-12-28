@@ -13,7 +13,7 @@ class OauthController extends Controller
     {
         $model = new UserSignup();
 
-        if($model->load(\Yii::$app->getRequest()->getBodyParams(), '')) {
+        if($model->load(\Yii::$app->getRequest()->getBodyParams(),'')) {
             // return \Yii::$app->getRequest()->getBodyParams();
             return $model->signup();
         } else {
@@ -24,7 +24,7 @@ class OauthController extends Controller
     public function actionLogin()
     {
         $model = new LoginForm();
-        if($model->load(\Yii::$app->getRequest()->getBodyParams(), '') && $model->login()) {
+        if($model->load(\Yii::$app->getRequest()->getBodyParams(),'') && $model->login()) {
             $user = User::findOne(['username'=>$model->username]);
             $user->access_token = \Yii::$app->security->generateRandomString();
             $user->save();

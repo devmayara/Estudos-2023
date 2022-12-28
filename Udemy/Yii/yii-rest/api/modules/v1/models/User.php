@@ -3,9 +3,10 @@
 namespace api\modules\v1\models;
 
 use yii\db\ActiveRecord;
+use yii\web\IdentityInterface;
 
 
-class User extends ActiveRecord implements \yii\web\IdentityInterface
+class User extends ActiveRecord implements IdentityInterface
 {
     const ACTIVE_USER = 1;
     const INATIVE_USER = 0;
@@ -18,7 +19,6 @@ class User extends ActiveRecord implements \yii\web\IdentityInterface
         ];
     }
     
-// afri_
     public static function tableName()
     {
         return '{{%user}}';
@@ -30,7 +30,7 @@ class User extends ActiveRecord implements \yii\web\IdentityInterface
     public static function findIdentity($id)
     {
         // return isset(self::$users[$id]) ? new static(self::$users[$id]) : null;
-        return static::findOne(['id'=>$id, 'status'=>self::ACTIVE_USER]);
+        return static::findOne(['id' => $id, 'status' => self::ACTIVE_USER]);
     }
 
     /**
@@ -45,22 +45,22 @@ class User extends ActiveRecord implements \yii\web\IdentityInterface
         // }
 
         // return null;
-        return static::findOne(['access_token'=>$token]);
+        return static::findOne(['access_token' => $token]);
     }
 
     /**
      * Finds user by usename
      *
      * @parem string $username
-     * @return static|null
+     * @return ActiveRecord|array
      */
     public static function findByUsername($username)
     {
         // return static::findOne(['username'=>$username,'status'=>self::ACTIVE_USER]);
 
-        return static::find()->where(['username'=>$username])
-            ->orWhere(['email', $username])
-            ->andWhere(['status'=>self::ACTIVE_USER])
+        return static::find()->where(['username' => $username])
+            ->orWhere(['email' => $username])
+            ->andWhere(['status' => self::ACTIVE_USER])
             ->one();
     }
 
