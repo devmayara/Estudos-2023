@@ -1,3 +1,11 @@
-<?php get_header()?>
+<?php get_header(); ?>
+    <section>
+        <div class="container">
+            ...
+        </div>
+        
+        <?php get_sidebar(); ?>
 
-<?php get_footer()?>
+        <div style="clear: both;"></div>
+    </section>
+<?php get_footer(); ?>
