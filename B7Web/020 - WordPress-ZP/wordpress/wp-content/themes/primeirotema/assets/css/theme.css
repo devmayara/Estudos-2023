@@ -27,3 +27,22 @@ sidebar {
 .widget_title {
     color: blue;
 }
+
+#art_post {
+    border: 1px solid #000;
+    background-color: white;
+    padding: 10px;
+    margin: 20px;
+
+}
+
+.paginacao {
+    padding: 10px;
+    margin: 20px;
+}
+.pagina_anterior {
+float: left;
+}
+.pagina_proxima {
+    float: right;
+}

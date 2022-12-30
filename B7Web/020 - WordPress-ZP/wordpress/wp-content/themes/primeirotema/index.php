@@ -5,7 +5,7 @@
                 <?php while(have_posts()): ?>
                     <?php the_post(); ?>
                     
-                    <article>
+                    <article id="art_post">
 
                         <?php if(has_post_thumbnail()): ?>
                             <a href="<?php the_permalink(); ?>">
@@ -25,10 +25,24 @@
                             <?php the_category(', '); ?>
                         </div>
 
+                        <p>
+                            <?php comments_number('0 comentários', '1 comentário', '% comentários');?> |
+                            <a href="<?php the_permalink(); ?>">LEIA MAIS</a>
+                        </p>
+
                     </article>
 
                 <?php endwhile; ?>
             <?php endif; ?>
+
+            <div class="paginacao">
+                <div class="pagina_anterior">
+                    <?php previous_post_link('Página Anterior'); ?>                            
+                </div>
+                <div class="pagina_proxima">
+                    <?php next_post_link('Próxima Página'); ?>
+                </div>
+            </div>
         </div>
         
         <?php get_sidebar(); ?>
