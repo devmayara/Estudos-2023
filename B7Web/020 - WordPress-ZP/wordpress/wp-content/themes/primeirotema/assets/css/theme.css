@@ -46,3 +46,7 @@ float: left;
 .pagina_proxima {
     float: right;
 }
+
+footer {
+    padding: 90px;
+}

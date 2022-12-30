@@ -24,6 +24,10 @@
                             <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a> |
                             <?php the_category(', '); ?>
                         </div>
+                        
+                        <p>
+                            <?php the_content(); ?>
+                        </p>
 
                         <p>
                             <?php comments_number('0 comentários', '1 comentário', '% comentários');?> |
@@ -37,10 +41,10 @@
 
             <div class="paginacao">
                 <div class="pagina_anterior">
-                    <?php previous_post_link('Página Anterior'); ?>                            
+                    <?php previous_posts_link('Página Anterior'); ?>                            
                 </div>
                 <div class="pagina_proxima">
-                    <?php next_post_link('Próxima Página'); ?>
+                    <?php next_posts_link('Próxima Página'); ?>
                 </div>
             </div>
         </div>
