@@ -47,6 +47,17 @@ float: left;
     float: right;
 }
 
+.comentario {
+    border-bottom: 1px solid #ccc;
+}
+.comentario_foto {
+    float: left;
+    margin-right: 10px;
+}
+.comentario_content {
+    
+}
+
 footer {
     padding: 90px;
 }
