@@ -12,5 +12,9 @@ function bs_theme_styles() {
 }
 
 function bs_after_setup() {
-    
+    add_theme_support('title-tag');
+    add_theme_support('custom-logo');
+    add_theme_support('post-thumbnails');
+
+    register_nav_menu("primary", __('Primary Menu', 'segundotema'));
 }
