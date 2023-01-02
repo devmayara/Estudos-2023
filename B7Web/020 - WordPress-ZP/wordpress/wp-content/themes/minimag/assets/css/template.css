@@ -72,9 +72,33 @@ body {
     background-color: #fff;
     height: 55px;
 }
+.random_post {
+    line-height: 55px;
+    color: #999;
+}
+.random_post a {
+    color: #999;
+    margin-right: 30px;
+}
 .social_area {
     background-color: #3382b5;
     height: 55px;
+    color: #999;
+}
+.social_txt {
+    line-height: 55px;
+    float: left;
+}
+.social_icons {
+    float: right;
+    height: 20px;
+    margin-top: 17px;
+}
+.social_icons img {
+    height: 20px;
+}
+.social_icons a {
+    text-decoration: none;
 }
 .main_info .row {
     margin: 0;
