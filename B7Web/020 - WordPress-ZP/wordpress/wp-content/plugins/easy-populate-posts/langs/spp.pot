@@ -1,0 +1,513 @@
+# Copyright (C) 2022 Iulia Cazan
+# This file is distributed under the GPL2.
+msgid ""
+msgstr ""
+"Project-Id-Version: Easy Populate Posts 4.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/spp\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-09-25T12:22:01+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.6.0\n"
+"X-Domain: spp\n"
+
+#. Plugin Name of the plugin
+#: easy-populate-posts.php:549
+#: easy-populate-posts.php:550
+#: easy-populate-posts.php:2552
+msgid "Easy Populate Posts"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://iuliacazan.ro/easy-populate-posts/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Populate your site with random generated content. You can configure the post type, description, excerpt, tags, post meta, terms, images, publish date, status, parent, sticky, etc."
+msgstr ""
+
+#. Author of the plugin
+msgid "Iulia Cazan"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://profiles.wordpress.org/iulia-cazan"
+msgstr ""
+
+#: easy-populate-posts.php:317
+msgid "Discard this group of settings?"
+msgstr ""
+
+#: easy-populate-posts.php:320
+msgid "Saving settings..."
+msgstr ""
+
+#: easy-populate-posts.php:321
+#: easy-populate-posts.php:326
+msgid "Done!"
+msgstr ""
+
+#: easy-populate-posts.php:322
+#: easy-populate-posts.php:1673
+#: easy-populate-posts.php:1682
+msgid "Save Settings"
+msgstr ""
+
+#: easy-populate-posts.php:325
+msgid "Generating posts..."
+msgstr ""
+
+#: easy-populate-posts.php:327
+#: easy-populate-posts.php:1684
+msgid "Execute Posts Add"
+msgstr ""
+
+#: easy-populate-posts.php:512
+msgid "See the list of exisiting post meta"
+msgstr ""
+
+#: easy-populate-posts.php:514
+msgid "ACF Fields Post Meta"
+msgstr ""
+
+#: easy-populate-posts.php:522
+msgid "Other Post Meta"
+msgstr ""
+
+#: easy-populate-posts.php:616
+#: easy-populate-posts.php:628
+msgid "Action not allowed."
+msgstr ""
+
+#: easy-populate-posts.php:1074
+msgid "Images to be set randomly as featured image."
+msgstr ""
+
+#. Translators: %1$s - donate URL, %2$s - rating.
+#: easy-populate-posts.php:1117
+msgid "If you find the plugin useful and would like to support my work, please consider making a <a href=\"%1$s\" target=\"_blank\" rel=\"noreferrer\">donation</a>.<br>It would make me very happy if you would leave a %2$s rating."
+msgstr ""
+
+#. Translators: %1$s - donate URL, %2$s - rating.
+#: easy-populate-posts.php:1117
+#: easy-populate-posts.php:1119
+#: easy-populate-posts.php:2588
+#: easy-populate-posts.php:2589
+msgid "A huge thanks in advance!"
+msgstr ""
+
+#: easy-populate-posts.php:1193
+msgid "Taxonomy"
+msgstr ""
+
+#: easy-populate-posts.php:1206
+msgid "all"
+msgstr ""
+
+#: easy-populate-posts.php:1207
+msgid "random"
+msgstr ""
+
+#: easy-populate-posts.php:1214
+msgid "name"
+msgstr ""
+
+#: easy-populate-posts.php:1220
+msgid "term_id"
+msgstr ""
+
+#: easy-populate-posts.php:1253
+msgid "Post Meta"
+msgstr ""
+
+#: easy-populate-posts.php:1259
+msgid "key"
+msgstr ""
+
+#: easy-populate-posts.php:1264
+msgid "value"
+msgstr ""
+
+#: easy-populate-posts.php:1303
+msgid "Load"
+msgstr ""
+
+#: easy-populate-posts.php:1304
+msgid "Export"
+msgstr ""
+
+#: easy-populate-posts.php:1306
+#: easy-populate-posts.php:1582
+msgid "Discard"
+msgstr ""
+
+#: easy-populate-posts.php:1310
+msgid "Copy the JSON string"
+msgstr ""
+
+#: easy-populate-posts.php:1325
+msgid "No groups."
+msgstr ""
+
+#: easy-populate-posts.php:1347
+msgid "Easy Populate Posts Settings"
+msgstr ""
+
+#: easy-populate-posts.php:1353
+msgid "The is a helper plugin that allows developers to populate the sites with random content (posts with random tags, images, date in the past or in the future, sticky flag), but with specific meta values and taxonomy terms associated if the case."
+msgstr ""
+
+#: easy-populate-posts.php:1362
+#: easy-populate-posts.php:1382
+msgid "Content"
+msgstr ""
+
+#: easy-populate-posts.php:1372
+msgid "use #NO for counter"
+msgstr ""
+
+#: easy-populate-posts.php:1373
+msgid "Title Prefix"
+msgstr ""
+
+#: easy-populate-posts.php:1374
+msgid "Title"
+msgstr ""
+
+#: easy-populate-posts.php:1377
+msgid "Start the auto-increment prefix number from this"
+msgstr ""
+
+#: easy-populate-posts.php:1384
+#: easy-populate-posts.php:1419
+#: easy-populate-posts.php:1458
+#: easy-populate-posts.php:1486
+msgid "Random"
+msgstr ""
+
+#: easy-populate-posts.php:1385
+msgid "Star Wars"
+msgstr ""
+
+#: easy-populate-posts.php:1386
+msgid "Lorem Ipsum"
+msgstr ""
+
+#: easy-populate-posts.php:1387
+#: easy-populate-posts.php:1394
+msgid "Gutenberg Template"
+msgstr ""
+
+#: easy-populate-posts.php:1399
+#: easy-populate-posts.php:1651
+msgid "Click the info icon to see the Gutenberg template example"
+msgstr ""
+
+#: easy-populate-posts.php:1406
+msgid "Use the example below, or add your own post template. For generating random texts, you can use the custom patterns in the template."
+msgstr ""
+
+#: easy-populate-posts.php:1417
+msgid "Paragraphs"
+msgstr ""
+
+#: easy-populate-posts.php:1432
+msgid "generate as Gutenberg blocks"
+msgstr ""
+
+#: easy-populate-posts.php:1444
+msgid "set large initial letter for the first paragraph (drop cap)"
+msgstr ""
+
+#: easy-populate-posts.php:1449
+msgid "Excerpt"
+msgstr ""
+
+#: easy-populate-posts.php:1451
+msgid "No excerpt"
+msgstr ""
+
+#: easy-populate-posts.php:1452
+msgid "Excerpt from content"
+msgstr ""
+
+#: easy-populate-posts.php:1453
+msgid "Random excerpt"
+msgstr ""
+
+#: easy-populate-posts.php:1456
+msgid "Sticky Post"
+msgstr ""
+
+#: easy-populate-posts.php:1459
+msgid "Yes"
+msgstr ""
+
+#: easy-populate-posts.php:1460
+msgid "No"
+msgstr ""
+
+#: easy-populate-posts.php:1465
+msgid "Post"
+msgstr ""
+
+#: easy-populate-posts.php:1467
+msgid "Maximum"
+msgstr ""
+
+#: easy-populate-posts.php:1469
+msgid "how many to generate"
+msgstr ""
+
+#: easy-populate-posts.php:1471
+msgid "Type"
+msgstr ""
+
+#: easy-populate-posts.php:1480
+msgid "Parent"
+msgstr ""
+
+#: easy-populate-posts.php:1481
+msgid "Parent ID"
+msgstr ""
+
+#: easy-populate-posts.php:1482
+msgid "for hierarchical type only"
+msgstr ""
+
+#: easy-populate-posts.php:1484
+#: easy-populate-posts.php:1496
+#: easy-populate-posts.php:2291
+msgid "Date"
+msgstr ""
+
+#: easy-populate-posts.php:1487
+msgid "Specific Date & Status"
+msgstr ""
+
+#: easy-populate-posts.php:1488
+msgid "In the past"
+msgstr ""
+
+#: easy-populate-posts.php:1489
+msgid "In the future"
+msgstr ""
+
+#: easy-populate-posts.php:1497
+msgid "Hour"
+msgstr ""
+
+#: easy-populate-posts.php:1503
+#: easy-populate-posts.php:2290
+msgid "Status"
+msgstr ""
+
+#: easy-populate-posts.php:1507
+msgid "will set a random status, correlated with the publish date"
+msgstr ""
+
+#: easy-populate-posts.php:1513
+msgid "Not Specific"
+msgstr ""
+
+#: easy-populate-posts.php:1524
+#: easy-populate-posts.php:1529
+msgid "defaults to"
+msgstr ""
+
+#: easy-populate-posts.php:1524
+msgid "published"
+msgstr ""
+
+#: easy-populate-posts.php:1529
+msgid "scheduled"
+msgstr ""
+
+#: easy-populate-posts.php:1533
+msgid "CONTENT CLEANUP ON DEACTIVATE"
+msgstr ""
+
+#: easy-populate-posts.php:1533
+msgid "please be careful, if you enable this option, when you deactivate the plugin, the content populated with this plugin will be removed, including the generated images"
+msgstr ""
+
+#: easy-populate-posts.php:1540
+msgid "Terms"
+msgstr ""
+
+#: easy-populate-posts.php:1543
+msgid "Random Tags"
+msgstr ""
+
+#: easy-populate-posts.php:1545
+msgid "separated by comma"
+msgstr ""
+
+#: easy-populate-posts.php:1551
+msgid "Separate terms names by comma (these will be created if not found) or the term IDs."
+msgstr ""
+
+#: easy-populate-posts.php:1551
+msgid "When using the random tags option, the post will get random terms from the combined list of names and IDs."
+msgstr ""
+
+#: easy-populate-posts.php:1557
+msgid "Meta"
+msgstr ""
+
+#: easy-populate-posts.php:1563
+msgid "Each of the specified post meta is a pair of meta_key and meta_value"
+msgstr ""
+
+#: easy-populate-posts.php:1567
+msgid "Images"
+msgstr ""
+
+#: easy-populate-posts.php:1569
+msgid "Random images"
+msgstr ""
+
+#: easy-populate-posts.php:1576
+msgid "Add images"
+msgstr ""
+
+#: easy-populate-posts.php:1580
+msgid "Use the plugin sample images"
+msgstr ""
+
+#: easy-populate-posts.php:1589
+msgid "You can add your own images URLs and click the \"save settings\" button (add URLs of images, separated by new line)."
+msgstr ""
+
+#: easy-populate-posts.php:1592
+msgid "If you want to reuse images you already have in the media library, add the attachments IDs (separated by new line)."
+msgstr ""
+
+#: easy-populate-posts.php:1598
+msgid "Patterns"
+msgstr ""
+
+#: easy-populate-posts.php:1602
+msgid "Click the info icon to see more about the custom patterns."
+msgstr ""
+
+#. Translators: %1$s - letter pattern, %2$s - number pattern, %3$s - text pattern.
+#: easy-populate-posts.php:1614
+msgid "To generate even more random content, you could use the following patterns in the title prefix, random tags, terms names, and meta values. <ol><li>%1$s: generates a random capital <b>letter</b> from A to Z,</li><li>%2$s: generates a random <b>number</b> bettween the `min` and `max` specified values,</li><li>%3$s: generates a random <b>string</b> with minimum `min` words and maximum `max` chars.</li></ol>"
+msgstr ""
+
+#. Translators: %1$s - letter pattern, %2$s - number pattern, %3$s - text pattern.
+#: easy-populate-posts.php:1625
+msgid "Pattern examples: %1$s, %2$s, %3$s, %4$s, %5$s, %6$s, %7$s, %8$s, %9$s, %10$s."
+msgstr ""
+
+#: easy-populate-posts.php:1626
+msgid "mobile number"
+msgstr ""
+
+#: easy-populate-posts.php:1627
+msgid "email address"
+msgstr ""
+
+#: easy-populate-posts.php:1628
+msgid "random URL"
+msgstr ""
+
+#: easy-populate-posts.php:1629
+msgid "letter"
+msgstr ""
+
+#: easy-populate-posts.php:1630
+msgid "capital letter"
+msgstr ""
+
+#: easy-populate-posts.php:1631
+msgid "number between 0-100"
+msgstr ""
+
+#: easy-populate-posts.php:1632
+msgid "with leading 0"
+msgstr ""
+
+#: easy-populate-posts.php:1633
+msgid "with trailing 0"
+msgstr ""
+
+#: easy-populate-posts.php:1634
+msgid "random title"
+msgstr ""
+
+#: easy-populate-posts.php:1635
+msgid "random text"
+msgstr ""
+
+#: easy-populate-posts.php:1641
+msgid "Test"
+msgstr ""
+
+#: easy-populate-posts.php:1645
+msgid "When one of the patterns is used in the title prefix, the whole pattern will be used for generating the title."
+msgstr ""
+
+#: easy-populate-posts.php:1649
+msgid "Import/Export"
+msgstr ""
+
+#: easy-populate-posts.php:1658
+msgid "For easily switching/restoring settings, you can save these as groups, each with a name, then export/import the JSON string to use in other instances."
+msgstr ""
+
+#: easy-populate-posts.php:1662
+#: easy-populate-posts.php:1666
+msgid "Import"
+msgstr ""
+
+#: easy-populate-posts.php:1663
+msgid "Paste the JSON string below, then click the import icon"
+msgstr ""
+
+#: easy-populate-posts.php:1665
+msgid "JSON string to be imported"
+msgstr ""
+
+#: easy-populate-posts.php:1669
+msgid "Groups"
+msgstr ""
+
+#: easy-populate-posts.php:1670
+msgid "Save the current settings as a group"
+msgstr ""
+
+#: easy-populate-posts.php:1672
+msgid "Group name"
+msgstr ""
+
+#: easy-populate-posts.php:2289
+msgid "Edit post"
+msgstr ""
+
+#: easy-populate-posts.php:2296
+msgid "Tags"
+msgstr ""
+
+#: easy-populate-posts.php:2302
+msgid "Categories"
+msgstr ""
+
+#. Translators: %1$s - extensions URL.
+#: easy-populate-posts.php:2557
+msgid "%5$sCheck out my other <a href=\"%1$s\" target=\"_blank\" rel=\"noreferrer\">%2$s free plugins</a> on WordPress.org and the <a href=\"%3$s\" target=\"_blank\" rel=\"noreferrer\">%4$s other extensions</a> available!"
+msgstr ""
+
+#. Translators: %1$s - plugin name.
+#: easy-populate-posts.php:2574
+msgid "%1$s plugin was activated!"
+msgstr ""
+
+#. Translators: %1$s - donate URL, %2$s - rating, %3$s - thanks.
+#: easy-populate-posts.php:2586
+msgid "This plugin is free to use, but not to operate. Please consider supporting my services by making a <a href=\"%1$s\" target=\"_blank\" rel=\"noreferrer\">donation</a>. It would make me very happy if you would leave a %2$s rating. %3$s"
+msgstr ""
