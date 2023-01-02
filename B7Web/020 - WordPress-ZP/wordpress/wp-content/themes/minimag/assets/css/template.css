@@ -100,6 +100,19 @@ body {
 .social_icons a {
     text-decoration: none;
 }
-.main_info .row {
+section .row {
     margin: 0;
+}
+.sidebar {
+    background-color: #eee;
+}
+.sidebar .widget {
+    border-bottom: 2px solid #e4e4e4;
+}
+.sidebar .widget .tag-cloud-link {
+    background-color: #94c345;
+    color: #fff;
+    padding: 10px;
+    margin: 2px;
+    border-radius: 8px;
 }
