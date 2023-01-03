@@ -3,7 +3,7 @@
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-sm-8">
+            <div class="col-sm-8 main_content">
                 ...
             </div>
             <?php get_sidebar(); ?>

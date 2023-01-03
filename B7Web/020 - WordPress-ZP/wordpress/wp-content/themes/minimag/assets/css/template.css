@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    background-color: #e7e7e7;
 }
 
 .top_header {
@@ -115,4 +116,47 @@ section .row {
     padding: 10px;
     margin: 2px;
     border-radius: 8px;
+}
+.main_content {
+    background-color: #fff;
+}
+
+footer {
+    margin-top: 55px;
+}
+.footer_widgets {
+    background-color: #fff;
+    padding: 20px;
+    color: #222326;
+}
+.main_footer {
+    background-color: #2d3034;
+    color: #fff;
+    height: 55px;
+}
+.main_footer_left {
+    float: left;
+    line-height: 55px;
+    margin-left: 15px;
+
+}
+.main_footer_right {
+    float: right;
+    line-height: 55px;
+    margin-right: 15px;
+}
+.main_footer_scroll {
+    position: absolute;
+    background-color: #e7e7e7;
+    width: 55px;
+    height: 30px;
+    left: 50%;
+    margin-left: -27;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+.main_footer_scroll img {
+    height: 20px;
 }

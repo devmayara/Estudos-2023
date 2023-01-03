@@ -15,7 +15,7 @@ function bm_after_setup() {
     register_nav_menu("top", "Menu Superior");
 }
 function bm_widgets() {
-register_sidebar(array(
+    register_sidebar(array(
         'name' => 'Sidebar Lateral',
         'id' => 'bm_sidebar',
         'description' => 'Sidebar Lateral',
@@ -23,5 +23,14 @@ register_sidebar(array(
         'after_widget' => '</div>',
         'before_title' => '<h4 class="widget_title">',
         'after_title' => '</h4>',
+    ));
+    register_sidebar(array(
+    'name' => 'Sidebar Rodapé',
+    'id' => 'bm_footersidebar',
+    'description' => 'Sidebar Rodapé',
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4 class="widget_title">',
+    'after_title' => '</h4>',
     ));
 }
