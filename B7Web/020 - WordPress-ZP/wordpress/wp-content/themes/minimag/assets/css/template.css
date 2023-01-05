@@ -120,6 +120,61 @@ section .row {
 .main_content {
     background-color: #fff;
 }
+.main_content article {
+    width: 50%;
+    float: left;
+}
+.main_content article a {
+    text-decoration: none;
+}
+.post_item {
+    margin: 15px;
+    height: 450px ;
+}
+.post_comment_area {
+    background-image: url('../images/');
+    background-color: #77b05a;
+    color: #fff;
+    height: 22px;
+    line-height: 22px;
+    font-size: 13px;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: right;
+    position: relative;
+    z-index: 99;
+}
+.post_info {
+    min-height: 200px;
+}
+.post_thumb {
+    width: 100%;
+    height: auto;
+    margin-top: -22px;
+}
+.post_data {
+    color: #b0afb0;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+.post_title {
+    color: #1e1e1e;
+    font-size: 20px;
+    font-weight: bold;
+}
+.post_excerpt {
+    color: #b0afb0;
+}
+.previous_pag {
+    float: left;
+    text-align: left;
+    margin: 10px 0;
+}
+.naxt_pag {
+    float: right;
+    text-align: right;
+    margin: 10px 0;
+}
 
 footer {
     margin-top: 55px;
