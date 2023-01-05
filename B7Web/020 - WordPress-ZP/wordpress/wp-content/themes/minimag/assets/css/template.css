@@ -176,6 +176,24 @@ section .row {
     margin: 10px 0;
 }
 
+.post_content img {
+    max-width: 100%;
+    height: auto;
+}
+.post_content {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+}
+.post_title_single {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+.comments_area {
+    border-top: 1px solid #ccc;
+    margin-top: 80px;
+}
+
 footer {
     margin-top: 55px;
 }
