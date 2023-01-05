@@ -5,12 +5,13 @@ body {
 
 .top_header {
     background-color: #222326;
-    height: 45px;
     border-bottom: 1px solid #414346;
 }
 .navbar-default {
-    /* background: none; */
+    background: none;
     border: 0;
+    margin-bottom: 0;
+    min-height: 44px;
 }
 .navbar-nav>li>a {
     padding-top: 12px;
@@ -232,4 +233,21 @@ footer {
 }
 .main_footer_scroll img {
     height: 20px;
+}
+
+
+
+/* Tablet vertical */
+@media (min-width:481px) and (min-width:768px) {
+    
+}
+
+/* Celular vertical */
+@media (min-width:480px) {
+    .footer_widgets .row {
+        display: block;
+    }
+
+    .top_header {
+    }
 }

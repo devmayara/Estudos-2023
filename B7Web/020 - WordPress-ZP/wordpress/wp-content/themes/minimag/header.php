@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user=scalable=no"/>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
     <header>
         <div class="top_header">
-            <nav class="navbar navbar-expand-md">
+            <nav class="collapse navbar-collapse">
                 <div class="container">
                     <!-- <div class="collapse navbar-collapse"> -->
                         <?php 
