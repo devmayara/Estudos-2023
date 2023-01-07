@@ -91,9 +91,11 @@
                                     SIGA:
                                 </div>
                                 <div class="social_icons">
-                                    <a href="https://facebook.com" target="_blank">
-                                        <img src="<?php echo get_template_directory_uri().'/assets/images/facebook.png'; ?>">
-                                    </a>
+                                    <?php if(get_theme_mod('bm_facebook')): ?>
+                                        <a href="<?php echo get_theme_mod('bm_facebook'); ?>" target="_blank">
+                                            <img src="<?php echo get_template_directory_uri().'/assets/images/facebook.png'; ?>">
+                                        </a>
+                                    <?php endif; ?>
                                     <a href="https://google.com" target="_blank">
                                         <img src="<?php echo get_template_directory_uri().'/assets/images/gplus.png'; ?>">
                                     </a>
