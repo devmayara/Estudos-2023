@@ -19,6 +19,13 @@ body {
     padding-bottom: 12px;
     color: #fff;
 }
+.navbar-toggler-icon {
+    background-color: #414346;
+    /* color: #fff; */
+}
+.collapse  {
+    color: #fff;
+}
 
 .main_header {
     height: 235px;
@@ -166,6 +173,9 @@ section .row {
 .post_excerpt {
     color: #b0afb0;
 }
+.pag {
+    padding: 20px;
+}
 .previous_pag {
     float: left;
     text-align: left;
@@ -238,16 +248,62 @@ footer {
 
 
 /* Tablet vertical */
-@media (min-width:481px) and (min-width:768px) {
-    
+@media (min-width:481px) and (max-width:768px) {
+    .main_content article {
+        float: none;
+        width: auto;
+    }    
+    .post_item {
+        height: auto;
+        margin: 0;
+        padding-top: 15px;
+    }
 }
 
 /* Celular vertical */
-@media (min-width:480px) {
+@media (max-width:480px) {
     .footer_widgets .row {
         display: block;
     }
-
-    .top_header {
+    .logo {
+        text-align: center;
     }
+    .main_info,
+    .search_area {
+        display: none;
+    }
+    .main_nav {
+        height: auto;
+    }
+    .main_nav .navbar-nav {
+        margin: auto;
+    }
+    .main_content article {
+        float: none;
+        width: auto;
+    }
+    .post_item {
+        height: auto;
+        margin: 0;
+        padding-top: 15px;
+    }
+    .main_content,
+    .sidebar {
+        padding-top: 1px;
+    }
+    textarea {
+        width: 100%;
+    }
+    .main_footer_scroll {
+        left: 44%;
+        margin-left: -27;
+    }
+    .main_footer {
+        height: 90px;
+    }
+    .main_footer_left,
+    .main_footer_right {
+        line-height: 90px;
+    }
+     
 }

@@ -7,10 +7,24 @@
 <body <?php body_class(); ?>>
     <header>
         <div class="top_header">
-            <nav class="collapse navbar-collapse">
+            <nav class="navbar navbar-expand-sm">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
                 <div class="container">
-                    <!-- <div class="collapse navbar-collapse"> -->
-                        <?php 
+
+                    <!-- <div class="navbar-header">
+                        <div class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </div>
+                    </div> -->
+
+                    <div class="collapse navbar-collapse" id="navbar">
+                        <?php
                             if(has_nav_menu('top')) {
                                 wp_nav_menu(array(
                                     'theme_location' => 'top',
@@ -20,7 +34,8 @@
                                 ));
                             }
                         ?>
-                    <!-- </div> -->
+                    </div>
+
                 </div>
             </nav>
         </div>
